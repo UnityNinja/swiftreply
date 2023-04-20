@@ -1,0 +1,265 @@
+:root {
+  --primary: #635afe;
+  --secondary: #f2f7ff;
+  --primary-invert: #101927;
+  --secondary-invert: #fff;
+
+  --gradient-primary: linear-gradient(230deg, #0058e0, #0064fe);
+  --gradient-secondary: linear-gradient(230deg, #0a1f44, #020024);
+
+  /* DEFAULT COLOR OF TEXTS */
+  --text-primary: #101927;
+  --text-secondary: #88909b;
+
+  /* FOR BUTTONS & INPUTS */
+  --elements-roundness: 10rem;
+
+  --space-between-blocks: 5.3rem;
+  /* for mobiles */
+  --space-between-blocks-small-screens: 3rem;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+.space-between-blocks {
+  padding-top: var(--space-between-blocks-small-screens);
+  padding-bottom: var(--space-between-blocks-small-screens);
+}
+
+@media (min-width: 992px) {
+  .space-between-blocks {
+    padding-top: var(--space-between-blocks);
+    padding-bottom: var(--space-between-blocks);
+  }
+}
+
+/* ----------------- BUTTONS ------------------- */
+
+.svgMargin {
+  margin-right: 12px;
+}
+
+button {
+  color: inherit;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--elements-roundness);
+  justify-content: center;
+  /*transition: 0.1s all;*/
+}
+
+.btn,
+.btn:hover,
+.btn:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  background: none;
+  color: var(--secondary-invert);
+  border: 1px solid var(--secondary-invert);
+  border-radius: 3px;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: var(--secondary);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+}
+
+.btn-primary--empty,
+.btn-primary--empty:hover,
+.btn-primary--empty:focus {
+  color: var(--primary);
+}
+
+.btn-sm {
+  padding: 0.8rem;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+/* block header */
+
+.block__header {
+  margin-bottom: 4rem;
+}
+
+.block__title {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+@media (min-width: 992px) {
+  .block__title {
+    font-size: 2.5rem;
+  }
+
+  .block__title--big {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+}
+
+.block__paragraph {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Icons */
+
+.fr-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.fr-icon--medium {
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.fr-icon--large {
+  font-size: 1.2rem;
+  height: 3.25rem;
+  width: 3.25rem;
+}
+
+@media (min-width: 992px) {
+  .fr-icon--large {
+    height: 3.8rem;
+    width: 3.8rem;
+    font-size: 1.9rem;
+  }
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid #88909b;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.dd-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+  max-height: 160px;
+  z-index: 9999;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: -webkit-fill-available;
+  width: 100%;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider {
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+
+.SwiftReply_workspaces-dropdown{
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,196 @@
+html,
+body {
+  width: 330px !important;
+  border-bottom: 15px solid var(--primary);
+}
+
+.FastEmail__popup__header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+}
+
+.FastEmail__logo {
+  height: 1.1rem;
+}
+
+.FastEmail__popup__title {
+  text-align: left;
+  color: var(--primary);
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+
+.FastEmail__title {
+  color: var(--text-primary);
+  opacity: 0.7;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1.18rem;
+}
+
+.list__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+  color: var(--text-secondary) !important;
+}
+
+.list__link:hover,
+.list__link:focus {
+  color: white !important;
+  text-decoration: none;
+  color: var(--text-primary) !important;
+}
+
+.list__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.list__link:last-child {
+  margin: 0;
+}
+
+.FastEmail__icon {
+  width: 23px;
+  height: 23px;
+  color: var(--text-secondary);
+}
+
+.FastEmail__item {
+  max-width: 250px;
+}
+
+.FastEmail__item-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+  z-index: -1;
+  white-space: nowrap;
+}
+
+.FastEmail__item-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  width: 100%;
+  background: var(--secondary);
+  transform: translateY(2px);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.FastEmail__item-title {
+  white-space: nowrap;
+}
+
+.FastEmail__item-title::before {
+  display: none;
+}
+
+.FastEmail__item-description {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+
+.FastEmail__item-title,
+.FastEmail__item-description {
+  width: 95%;
+}
+
+.Logout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.GoPremium {
+  background: var(--primary);
+  color: var(--secondary-invert);
+}
+
+.GoPremium_title {
+  font-size: 1rem;
+}
+
+/* TOGGLEE */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  transform: scale(0.6);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.swiftreply_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.swiftreply_slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .swiftreply_slider {
+  background-color: #635afe;
+}
+
+input:focus + .swiftreply_slider {
+  box-shadow: 0 0 1px #635afe;
+}
+
+input:checked + .swiftreply_slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.swiftreply_slider.swiftreply_round {
+  border-radius: 34px;
+}
+
+.swiftreply_slider.swiftreply_round:before {
+  border-radius: 50%;
+}
